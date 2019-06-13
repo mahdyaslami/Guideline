@@ -296,9 +296,9 @@ Coding Standards
 #. Symfony is released under the MIT license, and the license block
    has to be present at the top of every PHP file, before the namespace.
 
-... rubric:: References
+.. rubric:: References
 
-'symfony coding standards <https://github.com/symfony/symfony-docs/blob/master/contributing/code/standards.rst>'
+`symfony coding standards <https://github.com/symfony/symfony-docs/blob/master/contributing/code/standards.rst>`_
 
 .. _PHP CS Fixer tool: https://cs.symfony.com/
 .. _PSR-0: https://www.php-fig.org/psr/psr-0/

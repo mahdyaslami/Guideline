@@ -11,3 +11,4 @@
    :caption: فهرست مطالب:
 
    php/standards.rst
+   php/conventions.rst
