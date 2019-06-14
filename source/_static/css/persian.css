@@ -33,6 +33,14 @@ div.persian pre {
 }
 
 /*
+ * Use this if you all your literal blocks (````) are LTR 
+ */
+div.persian code, div.persian code * {
+    direction: ltr; 
+    text-align: left;
+}
+
+/*
  * Use this if you all your inline literals (``) are LTR 
  */
 div.persian tt {
@@ -46,4 +54,13 @@ div.persian tt {
 div.persian cite {
     direction: ltr; 
     unicode-bidi: embed; 
+}
+
+/*
+ * در بلاک نکات خود تیتر «نکته» که «نوت» نوشته می شود باید چپ چین باشد تا بهتر 
+ * دیده بشود
+ */
+div.persian .admonition-title {
+    direction: ltr; 
+    text-align: left;
 }

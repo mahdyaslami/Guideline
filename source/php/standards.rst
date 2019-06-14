@@ -1,40 +1,39 @@
-Coding Standards
-****************
+.. rst-class:: persian
 
-1. Introduction
-===============
+استاندارد کد نویسی
+******************
 
-#. Symfony code is contributed by thousands of developers around the
-   world. To make every piece of code look and feel familiar, Symfony defines
-   some coding standards that all contributions must follow.
+:doc:`English <standards-en>`
 
-#. These Symfony coding standards are based on the `PSR-1`_, `PSR-2`_ and 
-   `PSR-4`_ standards, so you may already know most of them.
+1. مقدمه
+========
 
-2. Making your Code Follow the Coding Standards
-===============================================
+#. این استاندارد کد نویسی بر پایه استاندارد های `PSR-1`_، `PSR-2`_ و `PSR-4`_، 
+   بنابراین بهتر هست که از آنها آگاهی داشته باشید.
 
-#. Instead of reviewing your code manually, Symfony makes it simple to
-   ensure that your contributed code matches the expected code syntax. First,
-   install the `PHP CS Fixer tool`_ and then, run this command to fix any
-   problem::
+2. هماهنگ کردن کد هایتان با استاندارد کد نویسی
+==============================================
+
+#. به غیر از بررسی کردن کد ها به صورت چشمی، سیمفونی یک راهکار ساده تر برای اینکه 
+   از استاندارد بودن کد های خودتان مطمئن شوید ارائه داده است. اول ابزار
+   `PHP CS Fixer`_ را نصب کنید و بعد دستورات زیر را اجرا کنید تا همه چیز 
+   درست بشود:
+   
+.. code-block:: none
 
     $ cd your-project/
     $ php php-cs-fixer.phar fix -v
 
-#. If you forget to run this command and make a pull request with any
-   syntax issue, our automated tools will warn you about that and will provide
-   the solution.
+3. جزئیات استاندارد کد نویسی
+============================
 
-3. Coding Standards in Detail
-=============================
-
-#. If you want to learn about the Symfony coding standards in detail,
-   here's a short example containing most features described below:
+#. یک مثال کوتاه شامل بیشتر ویژگی هایی که در زیر توصیف شده است:
 
 .. code-block:: php
-
-   /*
+    
+    <?php
+    
+    /*
     * This file is part of the Symfony package.
     *
     * (c) Fabien Potencier <fabien@symfony.com>
@@ -43,13 +42,13 @@ Coding Standards
     * file that was distributed with this source code.
     */
 
-   namespace Acme;
+    namespace Acme;
 
-   /**
+    /**
     * Coding standards demonstration.
     */
-   class FooBar
-   {
+    class FooBar
+    {
        /**
         * This part is description about this constant. it isn't in orginal
         * document but i think it's neccesary.
@@ -146,109 +145,137 @@ Coding Standards
 
            return !$value;
        }
-   }
+    }
 
-3.2. Structure
---------------
+3.2. ساختار
+-----------
 
-#. Add a single space after each comma delimiter;
+#. اضافه کردن یک space بعد از هر ویرگول (کاما)؛
 
-#. Add a single space around binary operators (``==``, ``&&``, ...),
-   with the exception of the concatenation (``.``) operator;
+#. اضافه کردن یک space قبل و بعد از هر عملگر دو دویی (``==``, ``&&``, ...)؛
 
-#. Place unary operators (``!``, ``--``, ...) adjacent to the
-   affected variable;
+#. قراردادن عملگر های یگانه (``!``, ``--``, ...) دقیقا چسبیده به متغیری که متاثر
+   از آنها هست؛
 
-#. Always use `identical comparison`_ unless you need type
-   juggling;
+#. همیشه از مقایسه ها و تطبیق های برابری `identical comparison`_ (``===``, ...) 
+   استفاده کنید در غیر این صورت این موضوع دچار سردرگمی شما خواهد شد؛
 
-#. Use `Yoda conditions`_ when checking a variable against an
-   expression to avoid an accidental assignment inside the condition statement
-   (this applies to ``==``, ``!=``, ``===``, and ``!==``);
+#. از `Yoda conditions`_ () برای مقایسه یک متغیر با یک عبارت استفاده کنید تا از 
+   اشتباه رایج مقدار دهی درون شرطها جلوگیری شود (برای عملگر های ``==``، ``!=``،
+   ``===`` و ``!==`` از این شیوه استفاده کنید)؛
 
-#. Add a comma after each array item in a multi-line array, even
-   after the last one;
+.. note::
+    
+    `Yoda conditions`_ به یک شیوه نوشتن شرط گفته می شود که در آن عبارت ثابت شرط
+    در ابتدای شرط می آید و متغیر در انتها مثل::
+    
+        if ("42" === $variable)
 
-#. Add a blank line before ``return`` statements, unless the return
-   is alone inside a statement-group (like an ``if`` statement);
+#. یک ویرگول (comma) بعد از هر عنصر در تعریف یا استفاده از آرایه های در چند خط 
+   قرار دهید حتی بعد از اخرین عنصر آرایه؛
 
-#. Use ``return null;`` when a function explicitly returns ``null``
-   values and use ``return;`` when the function returns ``void`` values;
+#. بعد از هر خط ``return`` یک خط خالی قرار دهید. مگر اینکه ``return`` داخل یک 
+   آکلاد یا یک خالی باشد مثل یک ``if``؛
 
-#. Use braces to indicate control structure body regardless of the
-   number of  statements it contains;
+.. code-block:: php
 
-#. Define one class per file - this does not apply to private helper
-   classes that are not intended to be instantiated from the outside and thus are
-   not concerned by the `PSR-0`_ and `PSR-4`_ autoload standards;
+    <?php
 
-#. Declare the class inheritance and all the implemented interfaces
-   on the same line as the class name;
+    if ($condition)
+    {
+        return $value;
+    }
 
-#. Declare class properties before methods;
+    if ($condition)
+    {
+        /*
+         * statements
+         */
 
-#. Declare public methods first, then protected ones and finally
-   private ones. The exceptions to this rule are the class constructor and the
-   ``setUp()`` and ``tearDown()`` methods of PHPUnit tests, which must always be
-   the first methods to increase readability;
+        return $value;
 
-#. Declare all the arguments on the same line as the method/function
-   name, no matter how many arguments there are;
+    }
 
-#. Use parentheses when instantiating classes regardless of the
-   number of arguments the constructor has;
+#. از ``return null;`` وقتی استفاده کنید که تابع شما صریحا و به وضوح ``null``
+   برگرداند و از ``return;`` وقتی استفاده کنید که تابع شما باید ``void`` 
+   برگرداند؛
 
-#. Exception and error message strings must be concatenated using `sprintf`;
-
-#. Calls to `trigger_error` with type ``E_USER_DEPRECATED`` must be switched to 
-   opt-in via ``@`` operator. Read more at 
-   `contributing-code-conventions-deprecations`;
-
-#. Do not use ``else``, ``elseif``, ``break`` after ``if`` and
-   ``case`` conditions which return or throw something;
-
-#. Do not use spaces around ``[`` offset accessor and before ``]``
-   offset accessor;
-
-#. Add a ``use`` statement for every class that is not part of the
-   global namespace;
-
-#. When PHPDoc tags like ``@param`` or ``@return`` include ``null``
-   and other types, always place ``null`` at the end of the list of types.
+#. از پرانتز برای مشخص کردن ساختار های کنترلی استفاده کنید صرف نظر از تعداد 
+   عبارت های تشکیل دهند آنها؛
    
-3.3. Naming Conventions
------------------------
+#. درون هر فایل فقط یک کلاس تعریف شود - البته این کار شامل کلاس هایی که قرار نیست
+   بیرون از این فایل مورد استفاده قرار گیرند نمی شود و آن کلاس ها مورد توجه
+   استاندارد های `PSR-0`_ و `PSR-4`_ قرار نمی گیرد؛
 
-#. Use `camelCase`_ for PHP variables, function and method names,
-   arguments (e.g. ``$acceptableContentTypes``, ``hasSession()``);
+#. تعریف ارث بری یک کلاس و نام تمام interface ها و class هایی که از آنها ارث می
+   می برد را درون یک خط قرار بدهید؛
 
-#. Use `snake_case`_ for configuration parameters and Twig
-   template variables (e.g. ``framework.csrf_protection``, ``http_status_code``);
+#. پراپرتی های کلاس ها را قبل از توابع آن تعریف کنید؛
+
+#. ابتدا متد ها و توابع عمومی public را تعریف کنید سپس آنهایی که محافظت شده
+   هستند protected و در نهایت متد های خصوص private. استثنا برای این قانون سازنده
+   کلاس ها constructors و متد های ``setUp()`` و ``tearDown()`` در تست های PHPUnit
+   هستند همیشه باید اول تعریف شوند تا خوانایی برنامه افزایش پیدا کند.
+
+#. همه آرگومان های یک تابع یا متد را درون خطی که نام متد یا تابع قرار دارد تعریف
+   کنید هیچ اهمیتی ندارد که چند آرگومان وجود دارد؛
+
+#. در ساختن یک شیء از یک کلاس حتما از پرانتز استفاده کنید صرف نظر از تعداد
+   آرگومان هایی که سازنده ها می گیرند؛
+   
+#. Exception ها و متن پیام های خطا باید با استفاده از تابع ``sprintf`` به هم
+   متصل شوند.
+
+#. صدا زدن ``trigger_error`` با نوع ``E_USER_DEPRECATED`` حتما باید از طریق
+   عملگر ``@`` انجام گیرد. برای اطلاعات بیشتر 
+   :ref:`منسوخ شده ها <contributing-code-conventions-deprecations>` را بخوانید؛
+
+#. بعد از ``if`` ها و ``case`` هایی که مقداری بر می گردانند یا خطایی پرتاب می 
+   کنند از ``else``، ``elseif`` و ``break`` استفاده نکنید.
+
+#. در هنگام گرفتن مقادیر یک آرایه وقتی از براکت باز و بسته ``[]`` استفاده میکنیم
+   نباید قبل و بعد از براکت ها space یا بگذاریم یا آنها را در چند خط تعریف کنیم؛
+
+#. برای هر کلاسی که عضوی از فضای نامیه عمومی (global namespace) نیست از ``use``
+   استفاده کنید؛
+
+#. وقتی که تگ های PHPDoc مثل ``@param`` یا ``@return`` شامل ``null`` هستند، 
+   همیشه ``null`` ها را در آخر لیست قرار دهید.
+   
+3.3. قرارداد های نام گذاری
+--------------------------
+
+#. از قرارداد نوشتاری `camelCase`_ برای نام متغیر ها، توابع و متد ها و آرگومان
+   ها استفاده کنید (``$acceptableContentTypes``, ``hasSession()``)؛
+
+#. از قرارداد نوشتاری `snake_case`_ پارامتر های تنظیمات و متغیر های Twig استفاده
+   کنید (``framework.csrf_protection``, ``http_status_code``)؛
 
 #. Use namespaces for all PHP classes and `UpperCamelCase`_ for
    their names (e.g. ``ConsoleLogger``);
 
-#. Prefix all abstract classes with ``Abstract`` except PHPUnit
-   ``*TestCase``. Please note some early Symfony classes do not follow this
-   convention and have not been renamed for backward compatibility reasons.
-   However all new abstract classes must follow this naming convention;
+#. برای نام namespace ها و همه کلاس ها در PHP از `UpperCamelCase`_ یا همان 
+   Pascal Casing استفاده کنید (e.g. ``ConsoleLogger``)؛
 
-#. Suffix interfaces with ``Interface``;
+#. همه کلاس های انتزاعی abstract با پیشوند ``Abstract`` شروع می شوند به استثنای
+   PHPUnit ``*TestCase``؛
 
-#. Suffix traits with ``Trait``;
+#. همه interface ها با پسوند ``Interface`` تمام می شوند؛
 
-#. Suffix exceptions with ``Exception``;
+#. همه trait ها با پسوند ``Trait`` تمام می شوند؛
 
-#. Use UpperCamelCase for naming PHP files (e.g.
-   ``EnvVarProcessor.php``) and snake case for naming Twig templates and web
-   assets (``section_layout.html.twig``, ``index.scss``);
+#. همه exception ها با پسوند ``Exception`` تمام می شوند؛
 
-#. For type-hinting in PHPDocs and casting, use ``bool`` (instead of
-   ``boolean`` or ``Boolean``), ``int`` (instead of ``integer``), ``float``
-   (instead of ``double`` or ``real``);
+#. از قرارداد نوشتاری `UpperCamelCase`_ برای نام گذاری فایل های PHP استفاده می
+   کنیم (``EnvVarProcessor.php``) و از قرار داد نوشتاری `snake_case`_ برای نام
+   گذاری Twig template ها و همچنین asset ها؛
 
-#. Don't forget to look at the more verbose `conventions`
-   document for more subjective naming considerations.
+#. برای اشاره کردن به نوع داده ها در PHPDocs و تبدیل نوع ها، از ``bool`` به جای
+   (``boolean`` یا ``Boolean``) استفاده کنید، از ``int`` به جای (``integer``)،
+   از ``float`` به جای (``double`` یا ``real``)؛
+
+#. فراموش نکنید که برای اینکه یک نگاه عمیق تر به نام گذاری داشته باشید به 
+   :ref:`conventions` مراجعه کنید؛
 
 3.4. Service Naming Conventions
 -------------------------------
@@ -300,7 +327,7 @@ Coding Standards
 
 `symfony coding standards <https://github.com/symfony/symfony-docs/blob/master/contributing/code/standards.rst>`_
 
-.. _PHP CS Fixer tool: https://cs.symfony.com/
+.. _PHP CS Fixer: https://cs.symfony.com/
 .. _PSR-0: https://www.php-fig.org/psr/psr-0/
 .. _PSR-1: https://www.php-fig.org/psr/psr-1/
 .. _PSR-2: https://www.php-fig.org/psr/psr-2/

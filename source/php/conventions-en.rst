@@ -1,11 +1,9 @@
-.. rst-class:: persian
+.. _conventions-en:
 
-.. _conventions:
+Conventions
+===========
 
-قرارداد ها
-==========
-
-:doc:`English <conventions-en>`
+:doc:`فارسی <conventions>`
 
 1. Introduction
 ---------------
@@ -87,7 +85,7 @@
    "replaceXXX", on the other hand, cannot add new elements. If an unrecognized 
    key is passed to "replaceXXX" it must throw an exception.
 
-.. _contributing-code-conventions-deprecations:
+.. _contributing-code-conventions-deprecations-en:
 
 3. Deprecations
 ---------------
