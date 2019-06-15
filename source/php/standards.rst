@@ -275,55 +275,26 @@
    از ``float`` به جای (``double`` یا ``real``)؛
 
 #. فراموش نکنید که برای اینکه یک نگاه عمیق تر به نام گذاری داشته باشید به 
-   :ref:`conventions` مراجعه کنید؛
+   :doc:`conventions` مراجعه کنید؛
 
-3.4. Service Naming Conventions
--------------------------------
-
-#. A service name must be the same as the fully qualified class name
-   (FQCN) of its class (e.g. ``App\EventSubscriber\UserSubscriber``);
-
-#. If there are multiple services for the same class, use the FQCN
-   for the main service and use lowercased and underscored names for the rest of
-   services. Optionally divide them in groups separated with dots (e.g.
-   ``something.service_name``, ``fos_user.something.service_name``);
-
-#. Use lowercase letters for parameter names (except when referring
-   to environment variables with the ``%env(VARIABLE_NAME)%`` syntax);
-
-#. Add class aliases for public services (e.g. alias
-   ``Symfony\Component\Something\ClassName`` to ``something.service_name``).
-
-3.5. Documentation
-------------------
-
-#. Add PHPDoc blocks for all classes, methods, and functions (though
-   you may be asked to remove PHPDoc that do not add value);
-
-#. Group annotations together so that annotations of the same type
-   immediately follow each other, and annotations of a different type are
-   separated by a single blank line;
-
-#. Omit the ``@return`` tag if the method does not return anything;
-
-#. The ``@package`` and ``@subpackage`` annotations are not used;
-
-#. Don't inline PHPDoc blocks, even when they contain just one tag
-   (e.g. don't put ``/** {@inheritdoc} */`` in a single line);
-
-#. When adding a new class or when making significant changes to an
-   existing class, an ``@author`` tag with personal contact information may be
-   added, or expanded. Please note it is possible to have the personal contact
-   information updated or removed per request to the
-   doc:`core team </contributing/code/core_team>`.
-
-3.6. License
+3.4. مستندات
 ------------
 
-#. Symfony is released under the MIT license, and the license block
-   has to be present at the top of every PHP file, before the namespace.
+#. به همه کلاس ها متد ها توابع و پراپرتی ها و ثوابت بلاک PHPDoc رو اضافه کنید
+   (اگرچه ممکنه شما بخواهید اون بلاک هایی که خالی هستند و پاک کنید - ولی پاسخ من
+   منفی هست اجازه بدید بلاک های خالی هم باشند)؛
 
-.. rubric:: References
+#. یادداشت ها رو جمع آوری کنید بعد از آن یادداشت های از یک جنس و کنار هم قرار
+   دهید و با یک خط خالی از یادداشت های دیگه که از جنس دیگه ای هستند جدا کنید؛
+
+#. اگر تابع هیچ مقداری بر نمی گرداند. تگ های ``@return`` رو از توضیحات حذف کنید؛
+
+#. از تگ های ``@package`` و ``@subpackage`` در یادداشت ها استفاده نمی شود؛
+
+#. حتی در صورتی که یادداشت های زیادی ندارید باز هم بلاک های PHPDoc رو تک خطی 
+   نکنید (یادداشت و به این شکل ``/** {@inheritdoc} */`` داخل یک خط نگذارید)؛
+
+.. rubric:: منابع
 
 `symfony coding standards <https://github.com/symfony/symfony-docs/blob/master/contributing/code/standards.rst>`_
 

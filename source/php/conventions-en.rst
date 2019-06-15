@@ -1,5 +1,3 @@
-.. _conventions-en:
-
 Conventions
 ===========
 
@@ -8,10 +6,9 @@ Conventions
 1. Introduction
 ---------------
 
-#. The `standards` document describes the coding standards for the PHP projects.
+#. The :doc:`standards-en` document describes the coding standards for the PHP projects.
    This document describes coding standards and conventions used in a project to
-   make it more consistent and predictable. You are encouraged to follow them in
-   your own code, but you don't need to.
+   make it more consistent and predictable.
 
 2. Method Names
 ---------------
@@ -32,14 +29,10 @@ Conventions
   #. ``count()``
   #. ``keys()``
 
-
 #. The usage of these methods is only allowed when it is clear that there is a 
    main relation:
 
   #. a ``CookieJar`` has many ``Cookie`` objects;
-
-  #. a Service ``Container`` has many services and many parameters (as services 
-     is the main relation, the naming convention is used for this relation);
 
   #. a Console ``Input`` has many arguments and many options. There is no "main"
      relation, and so the naming convention does not apply.

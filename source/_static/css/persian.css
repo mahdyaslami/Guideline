@@ -22,6 +22,7 @@ a, h1, h2, h3, h4, h5, h6, p, b, input, .footer {
 div.persian { 
     direction: rtl;
     text-align: right !important;
+    unicode-bidi: embed;
 }
 
 /*
@@ -30,6 +31,7 @@ div.persian {
 div.persian pre {
     direction: ltr; 
     text-align: left;
+    unicode-bidi: embed;
 }
 
 /*
@@ -38,6 +40,7 @@ div.persian pre {
 div.persian code, div.persian code * {
     direction: ltr; 
     text-align: left;
+    unicode-bidi: embed;
 }
 
 /*
@@ -45,6 +48,7 @@ div.persian code, div.persian code * {
  */
 div.persian tt {
     direction: ltr; 
+    text-align: left;
     unicode-bidi: embed;
 }
 
@@ -52,8 +56,9 @@ div.persian tt {
  * Use this if you all your interpretted text (`) is LTR 
  */
 div.persian cite {
-    direction: ltr; 
-    unicode-bidi: embed; 
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: embed;
 }
 
 /*
@@ -63,4 +68,5 @@ div.persian cite {
 div.persian .admonition-title {
     direction: ltr; 
     text-align: left;
+    unicode-bidi: embed;
 }

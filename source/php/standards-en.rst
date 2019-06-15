@@ -271,35 +271,19 @@ Coding Standards
    ``boolean`` or ``Boolean``), ``int`` (instead of ``integer``), ``float``
    (instead of ``double`` or ``real``);
 
-#. Don't forget to look at the more verbose `conventions-en` document for more 
-   subjective naming considerations.
+#. Don't forget to look at the more verbose :doc:`conventions-en` document for 
+   more subjective naming considerations.
 
-3.4. Service Naming Conventions
--------------------------------
-
-#. A service name must be the same as the fully qualified class name
-   (FQCN) of its class (e.g. ``App\EventSubscriber\UserSubscriber``);
-
-#. If there are multiple services for the same class, use the FQCN
-   for the main service and use lowercased and underscored names for the rest of
-   services. Optionally divide them in groups separated with dots (e.g.
-   ``something.service_name``, ``fos_user.something.service_name``);
-
-#. Use lowercase letters for parameter names (except when referring
-   to environment variables with the ``%env(VARIABLE_NAME)%`` syntax);
-
-#. Add class aliases for public services (e.g. alias
-   ``Symfony\Component\Something\ClassName`` to ``something.service_name``).
-
-3.5. Documentation
+3.4. Documentation
 ------------------
 
 #. Add PHPDoc blocks for all classes, methods, and functions (though
-   you may be asked to remove PHPDoc that do not add value);
+   you may be asked to remove PHPDoc that do not add value - but my answer is 
+   false, Let's have empty blocks);
 
-#. Group annotations together so that annotations of the same type
-   immediately follow each other, and annotations of a different type are
-   separated by a single blank line;
+#. Group annotations together so that annotations of the same type immediately
+   follow each other, and annotations of a different type are separated by a 
+   single blank line;
 
 #. Omit the ``@return`` tag if the method does not return anything;
 
@@ -307,18 +291,6 @@ Coding Standards
 
 #. Don't inline PHPDoc blocks, even when they contain just one tag
    (e.g. don't put ``/** {@inheritdoc} */`` in a single line);
-
-#. When adding a new class or when making significant changes to an
-   existing class, an ``@author`` tag with personal contact information may be
-   added, or expanded. Please note it is possible to have the personal contact
-   information updated or removed per request to the
-   doc:`core team </contributing/code/core_team>`.
-
-3.6. License
-------------
-
-#. Symfony is released under the MIT license, and the license block
-   has to be present at the top of every PHP file, before the namespace.
 
 .. rubric:: References
 

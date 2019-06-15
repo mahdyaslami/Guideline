@@ -7,48 +7,44 @@
 
 :doc:`English <conventions-en>`
 
-1. Introduction
----------------
+1. مقدمه
+--------
 
-#. The `standards` document describes the coding standards for the PHP projects.
-   This document describes coding standards and conventions used in a project to
-   make it more consistent and predictable. You are encouraged to follow them in
-   your own code, but you don't need to.
+#. در بخش :doc:`standards` به توصیف استاندارد کد نویسی برای یک پروژه PHP 
+   پرداختیم. اما در این بخش استاندارد ها و قرار داد های کد نویسی رو بررسی می 
+   کنیم که به ما کمک می کنه تا یک پروژه با چهار چوب محکم و قابل پیش بینی و فهم
+   داشته باشیم.
 
 2. Method Names
 ---------------
 
-#. When an object has a "main" many relation with related "things" (objects, 
-   parameters, ...), the method names are normalized:
+#. وقتی یک شیء ارتباطات اصلی و با بقیه چیز ها (اشیاء، پارمتر ها، ...) دارد نام 
+   متد ها و توابع باید به شیوه مناسبی اصلاح شود:
 
-  #. ``get()``
-  #. ``set()``
-  #. ``has()``
-  #. ``all()``
-  #. ``replace()``
-  #. ``remove()``
-  #. ``clear()``
-  #. ``isEmpty()``
-  #. ``add()``
-  #. ``register()``
-  #. ``count()``
-  #. ``keys()``
+    #. ``get()``
+    #. ``set()``
+    #. ``has()``
+    #. ``all()``
+    #. ``replace()``
+    #. ``remove()``
+    #. ``clear()``
+    #. ``isEmpty()``
+    #. ``add()``
+    #. ``register()``
+    #. ``count()``
+    #. ``keys()``
 
+#. تنها زمانی از این متد ها استفاده کنید که مطمئن باشید که یک ارتباط اصلی و کلی
+   وجود دارد:
 
-#. The usage of these methods is only allowed when it is clear that there is a 
-   main relation:
+    #. یک ``CookieJar`` تعداد زیادی ``Cookie`` دارد؛
 
-  #. a ``CookieJar`` has many ``Cookie`` objects;
+    #. a Console ``Input`` has many arguments and many options. There is no "main"
+       relation, and so the naming convention does not apply.
 
-  #. a Service ``Container`` has many services and many parameters (as services 
-     is the main relation, the naming convention is used for this relation);
-
-  #. a Console ``Input`` has many arguments and many options. There is no "main"
-     relation, and so the naming convention does not apply.
-
-  #. For many relations where the convention does not apply, the following 
-     methods must be used instead (where ``XXX`` is the name of the related 
-     thing):
+    #. For many relations where the convention does not apply, the following 
+       methods must be used instead (where ``XXX`` is the name of the related 
+       thing):
 
 +----------------+-------------------+
 | Main Relation  | Other Relations   |
