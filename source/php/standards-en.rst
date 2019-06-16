@@ -1,5 +1,5 @@
 Coding Standards
-****************
+================
 
 :doc:`فارسی <standards>`
 

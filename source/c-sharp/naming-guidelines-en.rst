@@ -17,32 +17,24 @@ you are required only to apply them to APIs that are publicly exposed
 (public or protected types and members, and explicitly implemented
 interfaces).
 
-In This Section
----------------
+.. toctree::
+   :maxdepth: 2
+   :caption: In This Section
+   
+   capitalization-conventions-en.rst
+   general-naming-conventions-en.rst
+   names-of-assemblies-and-dlls-en.rst
+   names-of-namespaces-en.rst
+   names-of-classes-structs-and-interfaces-en.rst
+   names-of-type-members-en.rst
+   naming-parameters-en.rst
+   naming-resources-en.rst
 
-| `Capitalization Conventions`_
-| `General Naming Conventions`_
-| `Names of Assemblies and DLLs`_
-| `Names of Namespaces`_
-| `Names of Classes, Structs, and Interfaces`_
-| `Names of Type Members`_
-| `Naming Parameters`_
-| `Naming Resources`_
-| *Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*
-
-*Reprinted by permission of Pearson Education, Inc. from `Framework
+*Reprinted by permission of Pearson Education, Inc. from*\ `Framework
 Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET
-Libraries, 2nd Edition`_ by Krzysztof Cwalina and Brad Abrams,
+Libraries, 2nd Edition`_\ *\by Krzysztof Cwalina and Brad Abrams,
 published Oct 22, 2008 by Addison-Wesley Professional as part of the
 Microsoft Windows Development Series.*
-
-thisis\ *one*\ word.
-
-r"""\*escape* \`with` "\\""""
-
-"""\\*escape* \\`with` "\\\\""""
-
-"""\*escape* \`with` "\\""""
 
 .. rubric:: References
 

@@ -1,7 +1,5 @@
 .. rst-class:: persian
 
-.. _conventions:
-
 قرارداد ها
 ==========
 
