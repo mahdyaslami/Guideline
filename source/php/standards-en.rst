@@ -4,14 +4,14 @@ Coding Standards
 :doc:`فارسی <standards>`
 
 1. Introduction
-===============
+---------------
 
 #. These Symfony coding standards are based on the `PSR-1`_, `PSR-2`_ and 
    `PSR-4`_ standards, so you may already know most of them.
 
 
 2. Making your Code Follow the Coding Standards
-===============================================
+-----------------------------------------------
 
 #. Instead of reviewing your code manually, Symfony makes it simple to
    ensure that your contributed code matches the expected code syntax. First,
@@ -24,7 +24,7 @@ Coding Standards
     $ php php-cs-fixer.phar fix -v
 
 3. Coding Standards in Detail
-=============================
+-----------------------------
 
 #. a short example containing most features described below:
 
@@ -147,7 +147,7 @@ Coding Standards
     }
 
 3.2. Structure
---------------
+^^^^^^^^^^^^^^
 
 #. Add a single space after each comma delimiter;
 
@@ -226,7 +226,7 @@ Coding Standards
 
 #. Calls to `trigger_error` with type ``E_USER_DEPRECATED`` must be switched to 
    opt-in via ``@`` operator. Read more at 
-   :ref:`Deprecations <contributing-code-conventions-deprecations-en>`;
+   :ref:`php-conventions-deprecations-en`;
 
 #. Do not use ``else``, ``elseif``, ``break`` after ``if`` and
    ``case`` conditions which return or throw something;
@@ -241,7 +241,7 @@ Coding Standards
    and other types, always place ``null`` at the end of the list of types.
    
 3.3. Naming Conventions
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Use `camelCase`_ for PHP variables, function and method names,
    arguments (e.g. ``$acceptableContentTypes``, ``hasSession()``);
@@ -275,7 +275,7 @@ Coding Standards
    more subjective naming considerations.
 
 3.4. Documentation
-------------------
+^^^^^^^^^^^^^^^^^^
 
 #. Add PHPDoc blocks for all classes, methods, and functions (though
    you may be asked to remove PHPDoc that do not add value - but my answer is 

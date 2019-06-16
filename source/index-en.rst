@@ -13,5 +13,6 @@ prepared in following table of content for you:
    :caption: Contents:
 
    other/persian.rst
-   php/standards-en.rst
-   php/conventions-en.rst
+   c-sharp/c-sharp-en.rst
+   php/php-en.rst
+   

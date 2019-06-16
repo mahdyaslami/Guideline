@@ -13,5 +13,4 @@
    :caption: فهرست مطالب:
 
    other/persian.rst
-   php/standards.rst
-   php/conventions.rst
+   php/php.rst

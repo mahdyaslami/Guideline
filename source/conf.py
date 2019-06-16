@@ -43,7 +43,7 @@ language = 'en'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['c-sharp'
+exclude_patterns = [
 ]
 
 
@@ -59,4 +59,4 @@ html_theme = 'bizstyle'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = ["css/persian.css"]
+html_css_files = ["css/persian.css", "css/custom.css"]

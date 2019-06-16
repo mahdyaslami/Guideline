@@ -15,8 +15,8 @@
    کنیم که به ما کمک می کنه تا یک پروژه با چهار چوب محکم و قابل پیش بینی و فهم
    داشته باشیم.
 
-2. Method Names
----------------
+2. نام متد ها
+-------------
 
 #. وقتی یک شیء ارتباطات اصلی و با بقیه چیز ها (اشیاء، پارمتر ها، ...) دارد نام 
    متد ها و توابع باید به شیوه مناسبی اصلاح شود:
@@ -39,12 +39,8 @@
 
     #. یک ``CookieJar`` تعداد زیادی ``Cookie`` دارد؛
 
-    #. a Console ``Input`` has many arguments and many options. There is no "main"
-       relation, and so the naming convention does not apply.
-
-    #. For many relations where the convention does not apply, the following 
-       methods must be used instead (where ``XXX`` is the name of the related 
-       thing):
+    #. برای خیلی از روابط که این قرارداد جوابگو نیست، متد های زیر میتواند مورد 
+       استفاده قرار بگیرد (به جای ``XXX`` نام رابطه را استفاده کنید):
 
 +----------------+-------------------+
 | Main Relation  | Other Relations   |
@@ -78,24 +74,25 @@
 
 
 .. note:: 
-   While "setXXX" and "replaceXXX" are very similar, there is one notable 
-   difference: "setXXX" may replace, or add new elements to the relation. 
-   "replaceXXX", on the other hand, cannot add new elements. If an unrecognized 
-   key is passed to "replaceXXX" it must throw an exception.
+    از انجایی که ``setXXX`` و ``replaceXXX`` خیلی شبیه هستند، یک نکته راجع به 
+    تفات آنها وجود دارد که قابل توجه است. متد ``setXXX`` ممکن هست یک مقدار رو 
+    جایگزین کند و یا یک عنصر جدید به رابطه اضافه کند. از طرف دیگر ``replaceXXX``
+    نمی تواند عنصر جدید اضافه کند و در صورتی که کلیدی که به ``replaceXXX`` داده
+    شد اشتباه باشد باید یک استثنا پرتاب بشود.
 
-.. _contributing-code-conventions-deprecations:
+.. _php-conventions-deprecations:
 
-3. Deprecations
+3. منسوخ شده ها
 ---------------
 
-#. From time to time, some classes and/or methods are deprecated in the 
-   framework; that happens when a feature implementation cannot be changed 
-   because of backward compatibility issues, but we still want to propose a 
-   "better" alternative. In that case, the old implementation can be 
-   **deprecated**.
+#. در طول زمان بعضی کلاس ها و یا متد ها درون پروژه ممکن است منسوخ شوند؛ این حالت 
+   زمانی اتفاق می افتد که می خواهید یک ویژگی جدید به سیستم خود اضافه کنید اما به
+   خاطر مشکل عدم سازگاری با پشت زمینه کد شما امکان تغییر وجود ندارد، اما در عین 
+   حال شما قصد رسیدن به یک ساختار سازگار تر و دارید که در این وضعیت پیاده سازی 
+   های قدیم شما **منسوخ** خواهند شد.
 
-#. A feature is marked as deprecated by adding a ``@deprecated`` phpdoc to 
-   relevant classes, methods, properties, ... :
+#. وقتی که تگ ``@deprecated`` به توضیحات یک عنصر اضافه شود آن عنصر منسوخ شده است
+   که می تواند یک کلاس، یک متد و یا یک پراپرتی باشد:
 
 .. code-block:: php
 
@@ -106,14 +103,13 @@
      * XXX instead.
      */
 
+#. پیام منسوخ شدن باید شامل شماره نسخه این که در آن کلاس یا متد مورد نظر منسوخ 
+   شده است باشد و همچنین شماره نسخه ای که در آن عنصر مورد نظر حذف خواهد شد به 
+   علاوه اگر ممکن باشد باید ویژگی جدیدی که جایگزین آن شده است هم معرفی بشود.
 
-#. The deprecation message should indicate the version when the class/method was
-   deprecated, the version when it will be removed, and whenever possible, how 
-   the feature was replaced.
-
-#. A PHP ``E_USER_DEPRECATED`` error must also be triggered to help people with 
-   the migration starting one or two minor versions before the version where the
-   feature will be removed (depending on the criticality of the removal):
+#. همیشه باید یک خطای ``E_USER_DEPRECATED`` شلیک شود تا کاربران بدانند که در یک
+   یا دو نسخه دیگر تغییرات صورت خواهد گرفت و قبل از اینکه تغییرات صورت بگیرد از
+   ویژگی های جدید استفاده کند (البته بستگی به حیاتی بودن تغییرات دارد):
    
 .. code-block:: php
 
@@ -122,14 +118,15 @@
     @trigger_error('XXX() is deprecated since vendor-name/package-name 2.8 and
     will be removed in 3.0. Use XXX instead.', E_USER_DEPRECATED);
 
-#. Without the `@-silencing operator`_, users would need to opt-out from 
-   deprecation notices. Silencing swaps this behavior and allows users to opt-in
-   when they are ready to cope with them (by adding a custom error handler like 
-   the one used by the Web Debug Toolbar or by the PHPUnit bridge).
+#. بدون `عملگر سکوت @`_، کاربر ها نمی توانند خطا هایی که به منسوخ شدن ارتباط 
+   دارد را رد کنند. بی صدا کردن این خطا ها به کاربر اجازه می دهد که این انتخاب 
+   را داشته باشد و هر زمانی که مناسب بود تغییرات برای مهاجرت به ویژگی های جدید 
+   را انجام بدهد. (شما می تواند این کار رو با اضافه کردن یک مدیریت کننده خطا مثل
+   آن چیزی که در Web Debug Toolbar با استفاده از PHPUnit bridge انجام گرفته است 
+   انجام دهید).
 
-#. When deprecating a whole class the ``trigger_error()`` call should
-   be placed between the namespace and the use declarations, like in this example
-   from `ArrayParserCache`_:
+#. وقتی که کل یک کلاس منسوخ می شود ``trigger_error()`` باید بین تعریف کلاس و فضای 
+   نامی قرار بگیرد شبیه این مورد مثال `ArrayParserCache`_:
 
 .. code-block:: php
 
@@ -152,9 +149,9 @@
     */
     class ArrayParserCache implements ParserCacheInterface
 
-.. _@-silencing operator: https://php.net/manual/en/language.operators.errorcontrol.php
+.. _عملگر سکوت @: https://php.net/manual/en/language.operators.errorcontrol.php
 .. _ArrayParserCache: https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/ExpressionLanguage/ParserCache/ArrayParserCache.php
 
-.. rubric:: References
+.. rubric:: منابع
 
 `symfony coding convention <https://github.com/symfony/symfony-docs/blob/master/contributing/code/conventions.rst>`_

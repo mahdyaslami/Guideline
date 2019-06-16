@@ -5,8 +5,8 @@
  */
 @import "fontiran.css";
 
-a, h1, h2, h3, h4, h5, h6, p, b, input, .footer {
-    font-family: iransharp, Arial;
+a, h1, h2, h3, h4, h5, h6, p, b, input, div {
+    font-family: iransharp, Arial !important;
 }
 
 /*

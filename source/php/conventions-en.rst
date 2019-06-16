@@ -34,9 +34,6 @@ Conventions
 
   #. a ``CookieJar`` has many ``Cookie`` objects;
 
-  #. a Console ``Input`` has many arguments and many options. There is no "main"
-     relation, and so the naming convention does not apply.
-
   #. For many relations where the convention does not apply, the following 
      methods must be used instead (where ``XXX`` is the name of the related 
      thing):
@@ -78,7 +75,7 @@ Conventions
    "replaceXXX", on the other hand, cannot add new elements. If an unrecognized 
    key is passed to "replaceXXX" it must throw an exception.
 
-.. _contributing-code-conventions-deprecations-en:
+.. _php-conventions-deprecations-en:
 
 3. Deprecations
 ---------------
