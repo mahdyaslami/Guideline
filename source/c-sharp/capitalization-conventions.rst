@@ -10,7 +10,7 @@
 راحت تر خواهد بود.
 
 قوانین بزرگی و کوچکی حروف برای نام ها
----------------------------------------
+-------------------------------------
 
 برای متفاوت جلوه داده و قابل فهم کردن یک کلمه در یک نام حرف اول کلمه را با
 حروف بزرگ بنویسید. در هیچ از زیر خط برای جدا کردن کردن کلمات و یا مهم نشان دادن 
@@ -92,19 +92,20 @@
 |            |        | | ``}``                                        |
 +------------+--------+------------------------------------------------+
 
-Capitalizing Compound Words and Common Terms
---------------------------------------------
+بزرگی و کوچکی حروف کلمات ترکیبی و اصطلاحات عمومی
+------------------------------------------------
 
-Most compound terms are treated as single words for purposes of
-capitalization.
+بیشتر اصطلاحات ترکیبی به عنوان یک کلمه واحد برای بزرگی و کوچکی حروف در نظر گرفته
+می شوند
 
-**X DO NOT** capitalize each word in so-called closed-form compound
-words.
+**X اجتناب کنید** بزرگ کردن حروف هر کلمه در کلمات ترکیبی که به اصطلاح در یک قالب
+بسته بندی شده اند.
 
-These are compound words written as a single word, such as endpoint. For
-the purpose of casing guidelines, treat a closed-form compound word as a
-single word. Use a current dictionary to determine if a compound word is
-written in closed form.
+در بحث بزرگی و کوچکی حروف کلمات ترکیبی که به صورت یک کلمه واحد نوشته می شوند مثلا
+endpoint به عنوان یک کلمه در نظر گرفته می شوند و همچنین کلمات ترکیبی که در قالب
+بسته بندی شده نمایش داده می شوند هم به عنوان یک کلمه در نظر گرفته می شود. برای
+نمونه از جدول زیر برای بررسی اینکه کلمات به صورت ترکیبی نوشته شده اند یا جدا
+استفاده کنید.
 
 =============== =============== ======================
 Pascal          Camel           Not
@@ -136,14 +137,17 @@ Pascal          Camel           Not
 ``Writable``    ``writable``    ``Writeable``
 =============== =============== ======================
 
-Case Sensitivity
-----------------
+حساس به بزرگی و کوچکی حروف
+--------------------------
 
-Languages that can run on the CLR are not required to support
-case-sensitivity, although some do. Even if your language supports it,
-other languages that might access your framework do not. Any APIs that
-are externally accessible, therefore, cannot rely on case alone to
-distinguish between two names in the same context.
+زبان های برنامه نویسی ای که به صورت مفسری کار می کنند اغلب نیاز ندارند که نسبت
+به بزرگی و کوچکی حروف حساس باشند اگرچه از زبان ها هم این حساسیت را دارند. حتی 
+اگر زبانی اکه استفاده می کنید این حساسیت را دارد باز هم ممکن است زبان های دیگری
+به framework شما دسترسی داشته باشند که این حساسیت را نداشته باشند بنابراین برای 
+هر API ای که به صورت خارجی قابل دسترس است تنها به بزرگی و کوچکی حرف برای ایجاد 
+تفاوت در نام ها استفاده نکنید.
 
-**X DO NOT** assume that all programming languages are case sensitive.
-They are not. Names cannot differ by case alone.
+**X اجتناب کنید** فرض کنید همه زبان های برنامه نویسی حساس به بزرگی و کوچکی حروف
+هستند. این طور نیست همه زبان ها این حساسیت را ندارند پس نام ها نباید و فقط در 
+وضعیت بزرگی و کوچکی حروف باهم تفاوت داشته باشند.
+
