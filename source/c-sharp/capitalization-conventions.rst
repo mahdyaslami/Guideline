@@ -3,6 +3,8 @@
 قرارداد بزرگی و کوچکی حروف
 ===========================
 
+:doc:`English <capitalization-conventions-en>`
+
 این خط مشی ها در این فصل روشی را مطرح می کند که وقتی شما در یک نمونه کد به صورت
 مداوم از آن استفاده کنید خواندن و درک نام نوع ها و اعضا و پارامتر ها برای شما 
 راحت تر خواهد بود.
@@ -46,47 +48,49 @@
 
 **✓ انجام دهید** از camelCasing برای نام پارامتر ها استفاده کنید.
 
-The following table describes the capitalization rules for different
-types of identifiers.
+جدول زیر قوانین بزرگی و کوچکی حروف را در در انواع حالت های نام برای انواع 
+مشخصه ها توصیف می کند.
 
-+------------+--------+----------------------------------------------+
-| Identifier | Casing | Example                                      |
-+============+========+==============================================+
-| Namespace  | Pascal | ``namespace System.Security { ... }``        |
-+------------+--------+----------------------------------------------+
-| Type       | Pascal | ``public class StreamReader { ... }``        |
-+------------+--------+----------------------------------------------+
-| Interface  | Pascal | ``public interface IEnumerable { ... }``     |
-+------------+--------+----------------------------------------------+
-| Method     | Pascal | ``public class Object {``                    |
-|            |        | ``public virtual string ToString();``        |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
-| Property   | Pascal | ``public class String {``                    |
-|            |        | ``public int Length { get; }``               |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
-| Event      | Pascal | ``public class Process {``                   |
-|            |        | ``public event EventHandler Exited;``        |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
-| Field      | Pascal | ``public class MessageQueue {``              |
-|            |        | ``public static readonly TimeSpan``          |
-|            |        | ``InfiniteTimeout;``                         |
-|            |        | ``}``                                        |
-|            |        | ``public struct UInt32 {``                   |
-|            |        | ``public const Min = 0;``                    |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
-| Enum value | Pascal | ``public enum FileMode {``                   |
-|            |        | ``Append,``                                  |
-|            |        | ``...``                                      |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
-| Parameter  | Camel  | ``public class Convert {``                   |
-|            |        | ``public static int ToInt32(string value);`` |
-|            |        | ``}``                                        |
-+------------+--------+----------------------------------------------+
+.. rst-class:: ltr
+
++------------+--------+------------------------------------------------+
+| Identifier | Casing | Example                                        |
++============+========+================================================+
+| Namespace  | Pascal | ``namespace System.Security { ... }``          |
++------------+--------+------------------------------------------------+
+| Type       | Pascal | ``public class StreamReader { ... }``          |
++------------+--------+------------------------------------------------+
+| Interface  | Pascal | ``public interface IEnumerable { ... }``       |
++------------+--------+------------------------------------------------+
+| Method     | Pascal | | ``public class Object {``                    |
+|            |        | | ``public virtual string ToString();``        |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
+| Property   | Pascal | | ``public class String {``                    |
+|            |        | | ``public int Length { get; }``               |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
+| Event      | Pascal | | ``public class Process {``                   |
+|            |        | | ``public event EventHandler Exited;``        |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
+| Field      | Pascal | | ``public class MessageQueue {``              |
+|            |        | | ``public static readonly TimeSpan``          |
+|            |        | | ``InfiniteTimeout;``                         |
+|            |        | | ``}``                                        |
+|            |        | | ``public struct UInt32 {``                   |
+|            |        | | ``public const Min = 0;``                    |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
+| Enum value | Pascal | | ``public enum FileMode {``                   |
+|            |        | | ``Append,``                                  |
+|            |        | | ``...``                                      |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
+| Parameter  | Camel  | | ``public class Convert {``                   |
+|            |        | | ``public static int ToInt32(string value);`` |
+|            |        | | ``}``                                        |
++------------+--------+------------------------------------------------+
 
 Capitalizing Compound Words and Common Terms
 --------------------------------------------

@@ -10,9 +10,10 @@ prepared in following table of content for you:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Table of Contents:
 
    other/persian.rst
    c-sharp/c-sharp-en.rst
    php/php-en.rst
+   html-css/html-css-en.rst
    

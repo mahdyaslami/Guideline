@@ -13,4 +13,5 @@
    :caption: فهرست مطالب:
 
    other/persian.rst
+   c-sharp/c-sharp.rst
    php/php.rst

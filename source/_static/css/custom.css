@@ -9,3 +9,12 @@ table.docutils {
 th {
     white-space:nowrap;
 }
+
+/*
+ * for set as background of code-blocks that it's content is not recommended by
+ * guideline.
+ */
+
+.not-recommended .highlight{
+    background-color: MistyRose;
+}

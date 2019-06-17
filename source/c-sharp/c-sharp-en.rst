@@ -1,6 +1,8 @@
 C Sharp
 *******
 
+:doc:`فارسی <c-sharp>`
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

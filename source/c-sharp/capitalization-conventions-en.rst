@@ -1,6 +1,8 @@
 Capitalization Conventions
 ==========================
 
+:doc:`فارسی <capitalization-conventions>`
+
 The guidelines in this chapter lay out a simple method for using case
 that, when applied consistently, make identifiers for types, members,
 and parameters easy to read.

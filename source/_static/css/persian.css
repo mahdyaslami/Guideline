@@ -70,3 +70,13 @@ div.persian .admonition-title {
     text-align: left;
     unicode-bidi: embed;
 }
+
+/*
+ * برای حالتی که به اختیار می خواهیم جهت یک عنصر را تغییر بدهیم
+ */
+div.persian .ltr {
+    direction: ltr; 
+    text-align: left;
+    unicode-bidi: embed;
+}
+
