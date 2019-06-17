@@ -1,30 +1,31 @@
-General Naming Conventions
-==========================
+.. rst-class:: persian
 
-This section describes general naming conventions that relate to word
-choice, guidelines on using abbreviations and acronyms, and
-recommendations on how to avoid using language-specific names.
+قرارداد های عمومی در نامگذاری
+=============================
 
-Word Choice
+این بخش قرارداد های عمومی نامگذاری را شرح می دهد که با انتخاب نام ها ارتباط 
+دارد، خط مشی استفاده از مخفف ها و اختصار ها، و توصیه هایی درباره اینکه چطور از
+از استفاده از کلمات کلیدی یک زبان برنامه نویسی اجتناب کنیم.
+
+انتخاب کلمه
 -----------
 
-**✓ DO** choose easily readable identifier names.
+**✓ انجام دهید** انتخاب راحترین و خوانا ترین نام برای یک مشخصه.
 
-For example, a property named ``HorizontalAlignment`` is more
-English-readable than ``AlignmentHorizontal``.
+برای نمونه، یک پراپرتی که ``HorizontalAlignment`` انتخاب شده است بسیار خوانا تر
+از نام ``AlignmentHorizontal`` در زبان انگلیسی است.
 
-**✓ DO** favor readability over brevity.
+**✓ انجام دهید** انتخاب خوانا ترین به جای مختصر ترین.
 
-The property name ``CanScrollHorizontally`` is better than
-``ScrollableX`` (an obscure reference to the X-axis).
+نام پراپرتی ``CanScrollHorizontally`` بهتر از نام ``ScrollableX`` است (یک ارجاع
+مبهم به محور افقی - X ها).
 
-**X DO NOT** use underscores, hyphens, or any other nonalphanumeric
-characters.
+**X انجام ندهید** استفاده از زیر خط، خط تیره، یا هر کاراکتر غیر الفبایی و عددی.
 
-**X DO NOT** use Hungarian notation.
+**X انجام ندهید** استفاده از شیوه `نامگذاری مجارستانی`_
 
-**X AVOID** using identifiers that conflict with keywords of widely used
-programming languages.
+**X اجتناب کنید** استفاده از مشخصه ها و نام هایی که با کلمات کلیدی زبان های 
+برنامه نویسی تلاقی دارد.
 
 According to Rule 4 of the Common Language Specification (CLS), all
 compliant languages must provide a mechanism that allows access to named
@@ -118,3 +119,4 @@ integer. You only need to take this approach when the existing 32-bit
 API exists; don’t do it for brand new APIs with only a 64-bit version.
 
 
+.. _نامگذاری مجارستانی: https://en.wikipedia.org/wiki/Hungarian_notation
