@@ -19,7 +19,8 @@ a, h1, h2, h3, h4, h5, h6, p, b, input, div {
  * در این قسمت به همان جهت عادی خود برگردانده می شوند ولی به شکلی که در مستندات
  * دیگر تاثیر گذار نباشند.
  */
-div.persian { 
+div.persian, 
+ .sphinxsidebarwrapper ul { 
     direction: rtl;
     text-align: right !important;
     unicode-bidi: embed;

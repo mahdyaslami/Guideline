@@ -15,3 +15,4 @@
    other/persian.rst
    c-sharp/c-sharp.rst
    php/php.rst
+   html-css/html-css.rst

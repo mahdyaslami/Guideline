@@ -1,6 +1,8 @@
 General Naming Conventions
 ==========================
 
+:doc:`فارسی <general-naming-conventions>`
+
 This section describes general naming conventions that relate to word
 choice, guidelines on using abbreviations and acronyms, and
 recommendations on how to avoid using language-specific names.

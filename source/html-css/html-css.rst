@@ -1,21 +1,24 @@
+.. rst-class:: persian
+
 HTML/CSS
 ********
 
-:doc:`English <html-css>`
+:doc:`فارسی <html-css-en>`
 
-This document defines formatting and style rules for HTML and CSS. It aims at 
-improving collaboration, code quality, and enabling supporting infrastructure. 
-It applies to raw, working files that use HTML and CSS, including GSS files. 
-Tools are free to obfuscate, minify, and compile as long as the general code 
-quality is maintained.
+این سند قوانینی را برای مرتب کردن و شکل داده به فایل های HTML و CSS تعریف 
+می کند. این قوانین کمک می کنند تا برقرار ارتباط بین توسعه دهندگان راحتر شود و 
+همچنین کیفیت کد را بالا می برد و امکان پشتیبانی از ساختار فایل را فراهم می کند.
+این قوانین را روی فایل های خام HTML و CSS اعمال کنید، همچنین روی فایل های GSS.
+ابزار های زیادی وجود دارند که می توانند کد شما را مبهم و کوچک کنند تا زمانی که 
+کیفیت کد حفظ شده باشد.
 
 .. toctree:: 
    :maxdepth: 2
-   :caption: Table of Contents
+   :caption: فهرست مطالب
    
-   general-en.rst
-   html-en.rst
-   css-en.rst
+   general.rst
+   html.rst
+   css.rst
 
 --------------------------------------------------------------------------------
 

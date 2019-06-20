@@ -226,7 +226,7 @@ Coding Standards
 
 #. Calls to `trigger_error` with type ``E_USER_DEPRECATED`` must be switched to 
    opt-in via ``@`` operator. Read more at 
-   :ref:`php-conventions-deprecations-en`;
+   :ref:`Deprecations <php-conventions-deprecations-en>`;
 
 #. Do not use ``else``, ``elseif``, ``break`` after ``if`` and
    ``case`` conditions which return or throw something;

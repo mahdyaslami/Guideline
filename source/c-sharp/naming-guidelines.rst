@@ -24,6 +24,7 @@
    :caption: در این بخش:
    
    capitalization-conventions.rst
+   general-naming-conventions
 
 .. rubric:: منابع
 

@@ -1,0 +1,546 @@
+/*
+ * classic.css_t
+ * ~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- classic theme.
+ *
+ * :copyright: Copyright 2007-2019 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ * black
+ * dimgrey
+ * darkgrey
+ * darkblue
+ * grey
+ * lightgrey
+ * lightblue
+ * lightskyblue
+ * WhiteSmoke
+ * ghostwhite
+ *
+ */
+
+@import url("basic.css");
+
+* {
+    box-sizing: border-box;
+}
+
+/* -- page layout ----------------------------------------------------------- */
+/*
+ * این استایل برای تگ بادی است
+ */
+body {
+    background: url('white-woven-fabric.jpg') repeat;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+/*
+ * تمام بخش محتوا و ساید بار درون این تگ قراردارند
+ * من اندازه این تگ را با انداز تگ کانتینر درون بوت
+ * استرپ تنظیم می کند
+ */
+
+div.document {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  div.document {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  div.document {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  div.document {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.document {
+    max-width: 1140px;
+  }
+}
+
+/*
+ * داخل تگ های زیر محتوای اصلی سایت قرار می گیرد
+ * یک ارتفاع حداقل دادیم تا مطمئن شویم فوتر در
+ * جای مناسبی قرار میگیرد
+ */
+div.documentwrapper {
+    border: 1px solid lightgrey;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 25px 0 0 0;
+    background: white;
+}
+
+@media (min-width: 1200px) {
+    div.documentwrapper {
+        float: right;
+    }
+}
+
+div.bodywrapper {
+    min-height: 100%;
+    background: white;
+    min-height: 750px;
+}
+
+div.body {
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+}
+
+@media (min-width: 992px) {
+    div.body {
+        width: 800px;
+    }
+}
+/*
+ * فوتر که در پایین قرار میگیرد و طبف طرح ما 
+ * باید همیشه به صورت ثابت در پایین قرار داشته
+ * باشد
+ */
+div.footer {
+    background: black;
+    color: white;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+div.footer a {
+    color: white;
+    text-decoration: underline;
+    background: transparent;
+}
+
+
+/*
+ * این بخش ناویگیشن بالا و پایین است که شامل دو
+ * بخش مسیر و دو کلید بعدی و ایندکس می شود
+ * اندازه محتوای داخل را با اندازه داکیومنت
+ * تنظیم می کنیم
+ */
+div.related {
+    background: black;
+    line-height: 30px;
+    height: 50px;
+    padding: 10px;
+    color: white;
+}
+
+div.related ul {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    div.related ul  {
+        max-width: 540px;
+    }
+  
+    div.related ul li.nav-item {
+        display: none;        
+    }
+    
+    div.related ul li.nav-item-0 {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    div.related ul  {
+        max-width: 720px;
+    }
+    
+    div.related ul li.nav-item {
+        display: inline;        
+    }
+}
+
+@media (min-width: 992px) {
+    div.related ul  {
+        max-width: 960px;
+    }
+    
+    div.related ul li.nav-item {
+        display: inline;        
+    }
+}
+
+@media (min-width: 1200px) {
+    div.related ul  {
+        max-width: 1140px;
+    }
+    
+    div.related ul li.nav-item {
+        display: inline;        
+    }
+}
+
+div.related a {
+    color: white;
+    background: transparent;
+}
+
+/*
+ * این تگ ها مربوط به ساید بار یا نوار کناری
+ * می باشد
+ */
+@media (min-width: 1200px) {
+    div.sphinxsidebar {
+        width: 300px;
+        min-height: 100%;
+        position: absolute;
+        margin: 0;
+        padding: 15px;
+        background: GhostWhite;
+        border: 1px solid lightgrey;
+        border-top: 0;
+    }
+}
+
+div.sphinxsidebar h3 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h3 a {
+    color: black;
+    background: transparent;
+}
+
+div.sphinxsidebar h4 {
+    color: black;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+div.sphinxsidebar p {
+    color: black;
+}
+
+div.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px;
+    padding: 0;
+    color: black;
+}
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points {
+    list-style: circle;
+}
+
+div.sphinxsidebar a {
+    color: black;
+    background: transparent;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid lightgrey;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+
+
+/* -- hyperlink styles ------------------------------------------------------ */
+
+a {
+    color: dimgrey;
+    text-decoration: none;
+    background: mistyrose;
+    padding: 0 5px;
+    border-radius: 0.25rem;
+}
+
+a:visited {
+    color: dimgrey;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* -- body styles ----------------------------------------------------------- */
+/*
+ * تگ های مربوط به تیتر ها و لینک بودن تیتر ها
+ */
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-weight: 300;
+    color: black;
+    margin: 2rem 0 0.5rem 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+div.body h1 { font-size: 2.5rem; }
+div.body h2 { font-size: 2rem; }
+div.body h3 { font-size: 1.75rem; }
+div.body h4 { font-size: 1.5rem; }
+div.body h5 { font-size: 1.25rem; }
+div.body h6 { font-size: 1rem; }
+
+a.toc-backref {
+    background: transparent;       
+}
+
+a.headerlink {
+    color: grey;
+    font-size: 0.8em;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+    background: transparent;
+}
+
+a.headerlink:hover {
+    background: grey;
+    color: white;
+    border-radius: 0.25rem;
+}
+
+/*
+ * 
+ */
+div.body p, div.body dd, div.body li, div.body blockquote {
+    text-align: justify;
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/*
+ * در این بخش کلیت اعلانات  مشخص می شد که در چه قالبی
+ */
+div.admonition {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+p.admonition-title {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+div.admonition p {
+    margin-bottom: 0px;
+}
+
+div.admonition pre {
+    margin-bottom: 5px;
+}
+
+div.admonition ul, div.admonition ol {
+    margin-bottom: 5px;
+}
+
+/*
+ * شکل نکات را مشخص می کند
+ */
+div.note {
+    background: lightblue;
+    border: 1px solid lightskyblue;
+    color: darkblue;
+    border-radius: 0.25rem;
+}
+
+div.note a {
+    color: darkblue;
+}
+/*
+ * این چند مورد در این استایل استفاده نشده اند برای
+ * غیر فعال شدند تا در زمان مناسب به شکل مناسب 
+ * پیاده سازی شوند
+div.seealso {
+    background: #ffc;
+    border: 1px solid #ff6;
+}
+
+div.topic {
+    background: #eee;
+}
+
+div.warning {
+    background: #ffe4e4;
+    border: 1px solid #f66;
+}
+*/
+
+/*
+ * این دو استایل تیتر اعلانات با متنش را در یک خط می آورد که
+ * طبق استایل ما مناسب نبود
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+*/
+
+/*
+ * بلاک کد در این قسمت استایل داده شده است
+ */
+div.highlight {
+    border-radius: 0.25rem;
+    background: whitesmoke;
+}
+
+pre {
+    padding: 15px;
+    color: dimgrey;
+    line-height: 120%;
+    border: 1px solid lightgrey;
+    border-left: 3px solid blue;
+    border-radius: 0.25rem;
+}
+
+code {
+    background: WhiteSmoke;
+    padding: 3px;
+    border-radius: 2px;
+    font-size: 0.95em;
+}
+
+/*
+ * جدول در این قسمت تنظیم شده است
+ */
+
+table.docutils {
+    border: 1px solid lightgrey;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+}
+
+table.docutils th p {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+table.docutils th, table.docutils td {
+    border: 1px solid lightgrey;
+    white-space: nowrap;
+    padding: 3px 10px 3px 10px;
+}
+
+/*
+ * فهرست داخلی یک سند در این قسمت 
+ * قراردارد
+ */
+
+div.topic {
+    padding: 15px;
+    margin: 15px 0;
+    border: 0 none;
+    border-radius: 0.25rem;
+}
+
+div.topic:hover {
+    background: whitesmoke;
+}
+
+div.topic .topic-title {
+    text-align: center;
+}
+div.topic a {
+    background: transparent;
+}
+
+/*
+ * فهرست مطالب اصلی در این قسمت استایل داده
+ * می شود
+ */
+div.toctree-wrapper {
+    padding: 15px
+}
+
+div.toctree-wrapper:hover {
+    background: whitesmoke;
+    border-radius: 0.25rem;
+}
+
+div.toctree-wrapper p.caption {
+    text-align: center;
+    width: 100%
+}
+
+div.toctree-wrapper a {
+    background: transparent;
+    color: black;
+}
+    
+li.toctree-l1 > a {
+    background: lightblue;
+    width: 100%;
+    display: inline-block;
+}   
+
+/*
+ *
+ */
+.warning code {
+    background: #efc2c2;
+}
+
+.note code {
+    background: #d6d6d6;
+}
+
+.viewcode-back {
+    font-family: sans-serif;
+}
+
+div.viewcode-block:target {
+    background: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+div.code-block-caption {
+    color: #efefef;
+    background: #1c4e63;
+}
