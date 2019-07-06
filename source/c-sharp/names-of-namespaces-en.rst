@@ -1,6 +1,8 @@
 Names of Namespaces
 ===================
 
+:doc:`فارسی <names-of-namespaces>`
+
 As with other naming guidelines, the goal when naming namespaces is
 creating sufficient clarity for the programmer using the framework to
 immediately know what the content of the namespace is likely to be. The
@@ -59,10 +61,8 @@ different categories of namespaces.
 
    Namespaces belonging to a single application model are very often
    used together, but they are almost never used with namespaces of
-   other application models. For example, the
-   <xref:System.Windows.Forms?displayProperty=nameWithType> namespace is
-   very rarely used together with the
-   <xref:System.Web.UI?displayProperty=nameWithType> namespace. The
+   other application models. For example, the ``System.Windows.Forms`` namespace 
+   is very rarely used together with the ``System.Web.UI`` namespace. The
    following is a list of well-known application model namespace groups:
 
    | ``System.Windows*``
@@ -72,9 +72,8 @@ different categories of namespaces.
    single application model.
 
    For example, do not add a type named ``Page`` to the
-   <xref:System.Web.UI.Adapters?displayProperty=nameWithType> namespace,
-   because the <xref:System.Web.UI?displayProperty=nameWithType>
-   namespace already contains a type named ``Page``.
+   ``System.Web.UI.Adapters`` namespace, because the ``System.Web.UI`` namespace 
+   already contains a type named ``Page``.
 
 -  **Infrastructure namespaces**
 
@@ -94,13 +93,13 @@ different categories of namespaces.
    the Core namespaces.
 
    For example, never use ``Stream`` as a type name. It would conflict
-   with <xref:System.IO.Stream?displayProperty=nameWithType>, a very
+   with ``System.IO.Stream``, a very
    commonly used type.
 
 -  **Technology namespace groups**
 
    This category includes all namespaces with the same first two
-   namespace nodes ``(<Company>.<Technology>*``), such as
+   namespace nodes ``(<Company>.<Technology>*)``, such as
    ``Microsoft.Build.Utilities`` and ``Microsoft.Build.Tasks``. It is
    important that types belonging to a single technology do not conflict
    with each other.

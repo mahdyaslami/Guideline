@@ -7,6 +7,6 @@ C Sharp
 
 .. toctree::
    :maxdepth: 2
-   :caption: فهرست مطالب:
+   :caption: فهرست مطالب
 
    naming-guidelines.rst
