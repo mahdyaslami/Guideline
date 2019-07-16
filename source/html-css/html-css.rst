@@ -22,19 +22,19 @@ HTML/CSS
 
 --------------------------------------------------------------------------------
 
-Be consistent.
+پایبنده به قوانین باشید.
 
-If you’re editing code, take a few minutes to look at the code around you and 
-determine its style. If they use spaces around all their arithmetic operators, 
-you should too. If their comments have little boxes of hash marks around them, 
-make your comments have little boxes of hash marks around them too.
+اگر یک کد را ویرایش می کنید، زمان زیادی نمی برد که بخواهید یک نگاه به آن 
+بیاندازید و شکل و قالب آن را تشخیص دهید. اگر آنها اطراف هر عملگر ریاضی space 
+گذاشته اند شما نیز باید این کار را انجم دهید. اگر دور توضیحات یک کادر با کاراکتر
+شارپ کشیده اند شما نیز اطراف توضیحات یک کادر با کاراکتر شارپ ایجاد کنید.
 
-The point of having style guidelines is to have a common vocabulary of coding so 
-people can concentrate on what you’re saying rather than on how you’re saying 
-it. We present global style rules here so people know the vocabulary, but local 
-style is also important. If code you add to a file looks drastically different 
-from the existing code around it, it throws readers out of their rhythm when 
-they go to read it. Avoid this.
+هدف داشته یک خط مشی برای شکل کد به معنای داشتن یک بدنه عمومی برای کد هاست که 
+باعث می شود افراد روی گفته های شما تمرکز داشته باشند نسبت به این که چطور آن را
+بیان کرده اید. ما در اینجا یک شکل عمومی را ارائه دادیم تا افراد با آن آشنایی 
+داشته باشند، اما شکل محلی هر کد هم اهمیت خود را دارد. اگر کدی که شما اضافه می
+کنید با کدی که از قبل وجود داشته خیلی تفاوت شکل داشته باشند باعث می شود حواس 
+خوانند پرت شود و ریتم خواندن را از دست بدهد. پس از این کار اجتناب کنید.
 
 .. rubric:: References
 
