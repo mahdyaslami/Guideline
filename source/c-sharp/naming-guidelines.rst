@@ -21,10 +21,12 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: در این بخش:
+   :caption: در این بخش
    
    capitalization-conventions.rst
    general-naming-conventions
+   names-of-assemblies-and-dlls.rst
+   names-of-namespaces.rst
 
 .. rubric:: منابع
 

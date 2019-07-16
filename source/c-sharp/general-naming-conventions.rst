@@ -29,41 +29,39 @@
 **X اجتناب کنید** استفاده از مشخصه ها و نام هایی که با کلمات کلیدی زبان های 
 برنامه نویسی تلاقی دارد.
 
-According to Rule 4 of the Common Language Specification (CLS), all
-compliant languages must provide a mechanism that allows access to named
-items that use a keyword of that language as an identifier. C#, for
-example, uses the @ sign as an escape mechanism in this case. However,
-it is still a good idea to avoid common keywords because it is much more
-difficult to use a method with the escape sequence than one without it.
+بر اساس قانون 4 مشخصات زبان های عمومی (CLS)، همه زبان های موظف هستند ساز و کاری
+جهت استفاده از کلمات کلید زبان فراهم کنند. C Sharp برای مثال از علامت @ بعنوان 
+یک ساز و کار در این نمونه استفاده می کند. با این حال استفاده نکردن از کلمات 
+کلیدی در نامگذاری یک ایده خوب محسوب می شود چون پیدا کردن یک تابع که نام آن با
+کارکتر @ (escape) است کار دشواری است.
 
-Using Abbreviations and Acronyms
---------------------------------
+استفاده از اختصارات و مخفف ها
+-----------------------------
 
-**X DO NOT** use abbreviations or contractions as part of identifier
-names.
+**X انجام ندهید** استفاده از مخفف ها و اختصارات به عنوان بخشی از نام یک مشخصه.
 
-For example, use ``GetWindow`` rather than ``GetWin``.
+برای مثال، استفاده از ``GetWin`` به جای ``GetWindow``.
 
-**X DO NOT** use any acronyms that are not widely accepted, and even if
-they are, only when necessary.
+**X انجام ندهید** استفاده از هر مخففی که به صورت عمومی پذیرفته شده نیست، اگر هم 
+پذیرفته شده است فقط در صورت ضررت استفاده کنید.
 
-Avoiding Language-Specific Names
---------------------------------
+استفاده نکردن از مشخصه های زبان
+-------------------------------
 
-**✓ DO** use semantically interesting names rather than
-language-specific keywords for type names.
+**✓ انجام دهید** از نام های مترادف استفاده کنید به جای اینکه از کلمات کلیدی زبان 
+برنامه نویسی استفاده کنید.
 
-For example, ``GetLength`` is a better name than ``GetInt``.
+برای مثال، ``GetLength`` بهتر از ``GetInt`` است.
 
-**✓ DO** use a generic CLR type name, rather than a language-specific
-name, in the rare cases when an identifier has no semantic meaning
-beyond its type.
+**✓ انجام دهید** در موارد نادری که مجبور هستید از نام انواع در نام مشخصه استفاده 
+کنید از نام CLR آنها به جای نامی که کلمه کلیدی است استفاده کنید.
 
-For example, a method converting to <xref:System.Int64> should be named
-``ToInt64``, not ``ToLong`` (because <xref:System.Int64> is a CLR name
-for the C#-specific alias ``long``). The following table presents
-several base data types using the CLR type names (as well as the
-corresponding type names for C#, Visual Basic, and C++).
+برای مثال، متدی که قرار است مقداری را به نوع ``System.Int64`` تبدیل کند بهتر است 
+نام ``ToInt64`` داشته باشد، نه نام ``ToLong``(چون ``System.Int64`` نام CLR برای
+کلمه کلیدی ``long`` در زبان C Sharp است). جدول زیر نام های CLR انواع داده را در
+زبان های برنامه نویسی مختلف بیان می کند.
+
+.. rst-class:: ltr
 
 ========== ============ ======================= ===========
 C#         Visual Basic C++                     CLR
@@ -84,41 +82,40 @@ C#         Visual Basic C++                     CLR
 **object** **Object**   **Object**              **Object**
 ========== ============ ======================= ===========
 
-**✓ DO** use a common name, such as ``value`` or ``item``, rather than
-repeating the type name, in the rare cases when an identifier has no
-semantic meaning and the type of the parameter is not important.
+**✓ انجام دهید** در موارد نادری که مشخصه هیچ مترادفی ندارد و نوع پارامتر اهمیتی 
+ندارد از نام های عمومی استفاده کنید، مثل ``Value`` یا ``item``، به جای اینکه نام
+نوع داده را تکرار کنید.
 
-Naming New Versions of Existing APIs
-------------------------------------
+نامگذاری نسخه جدید یک API موجود
+-------------------------------
 
-**✓ DO** use a name similar to the old API when creating new versions of
-an existing API.
+**✓ انجام دهید** زمانیکه یک نسخه جدید API را ایجاد می کنید از نام هایی شبیه 
+آنهایی که در API های قدیمی هستند استفاده کنید.
 
-This helps to highlight the relationship between the APIs.
+این کار کمک می کند تا ارتباط بین API ها را پر رنگ تر شوند.
 
-**✓ DO** prefer adding a suffix rather than a prefix to indicate a new
-version of an existing API.
+**✓ انجام دهید** ترجیحا پسوند به نام ها اضافه کنید به جای پیشوند در نامگذاری 
+برای مشخص کردن API های جدید.
 
-This will assist discovery when browsing documentation, or using
-IntelliSense. The old version of the API will be organized close to the
-new APIs, because most browsers and IntelliSense show identifiers in
-alphabetical order.
+این کار به پیدا کردن API ها هنگام خواندن مستندات کمک خواهد کرد یا زمانیکه از 
+IntelliSense استفاده می کنید، چون معمولا مرورگر ها و IntelliSense ها مشخصه ها را 
+برا اساس حروف الفبا مرتب می کنند.
 
-**✓ CONSIDER** using a brand new, but meaningful identifier, instead of
-adding a suffix or a prefix.
+**✓ لحاظ کنید** استفاده از یک نام جدید و با معنا به جای اضافه کردن پیشوند و 
+پسوند به نام قبلی.
 
-**✓ DO** use a numeric suffix to indicate a new version of an existing
-API, particularly if the existing name of the API is the only name that
-makes sense (i.e., if it is an industry standard) and if adding any
-meaningful suffix (or changing the name) is not an appropriate option.
+**✓ انجام دهید** از پسوند های عددی برای نام نسخه جدید یک API استفاده کنید خصوصا
+زمانیکه بهترین و مناسب ترین نام دقیقا نام همان API قدیمی است (در صورتی که با 
+استاندارد های شرکت منافاتی ندارد) و اگر اضافه کردن یک پسوند با معنا و یا تغییر 
+دادن نام مقدور نیست.
 
-**X DO NOT** use the “Ex” (or a similar) suffix for an identifier to
-distinguish it from an earlier version of the same API.
+**X انجام ندهید** استفاده کردن از پسوند هایی مثل ``Ex`` یا مشابه برای متمایز 
+کردن یک مشخصه با نسخه قدیمی تر آن.
 
-**✓ DO** use the “64” suffix when introducing versions of APIs that
-operate on a 64-bit integer (a long integer) instead of a 32-bit
-integer. You only need to take this approach when the existing 32-bit
-API exists; don’t do it for brand new APIs with only a 64-bit version.
+**✓ انجام دهید** برای API هایی که در نسخه جدید از ``Int64`` یا همان ``long`` به 
+جای ``int`` استفاده می کنند از پسوند ``64`` استفاده کنید. البته برای اینکه کار 
+در صورتی انجام دهید که نسخه قدیمی 32 بیتی هم وجود دارد برای API هایی که فقط نسخه
+64 بیتی دارند این پسوند را اضافه نکنید.
 
 
 .. _نامگذاری مجارستانی: https://en.wikipedia.org/wiki/Hungarian_notation
