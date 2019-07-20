@@ -16,4 +16,5 @@ prepared in following table of content for you:
    c-sharp/c-sharp-en.rst
    php/php-en.rst
    html-css/html-css-en.rst
+   javascript/javascript-en.rst
    
