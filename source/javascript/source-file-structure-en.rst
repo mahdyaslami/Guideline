@@ -94,7 +94,7 @@ semantics are not yet finalized. Note that this policy will be revisited once
 the semantics are fully-standard.
 
 3.4. ``goog.require`` statements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 Imports are done with ``goog.require`` statements, grouped together immediately 
 following the module declaration. Each ``goog.require`` is assigned to a single 
@@ -113,37 +113,61 @@ omitted, but the fully qualified name may not appear anywhere else in the file.
 A comment is required to explain why this is needed and suppress a compiler 
 warning.
 
-The lines are sorted according to the following rules: All requires with a name on the left hand side come first, sorted alphabetically by those names. Then destructuring requires, again sorted by the names on the left hand side. Finally, any goog.require calls that are standalone (generally these are for modules imported just for their side effects).
+The lines are sorted according to the following rules: All requires with a name 
+on the left hand side come first, sorted alphabetically by those names. Then 
+destructuring requires, again sorted by the names on the left hand side. 
+Finally, any ``goog.require`` calls that are standalone (generally these are for 
+modules imported just for their side effects).
 
-Tip: There’s no need to memorize this order and enforce it manually. You can rely on your IDE to report requires that are not sorted correctly.
+.. note::
+
+    There’s no need to memorize this order and enforce it manually. You can rely 
+    on your IDE to report requires that are not sorted correctly.
 
 If a long alias or module name would cause a line to exceed the 80-column limit, it must not be wrapped: goog.require lines are an exception to the 80-column limit.
 
 Example:
 
-const MyClass = goog.require('some.package.MyClass');
-const NsMyClass = goog.require('other.ns.MyClass');
-const googAsserts = goog.require('goog.asserts');
-const testingAsserts = goog.require('goog.testing.asserts');
-const than80columns = goog.require('pretend.this.is.longer.than80columns');
-const {clear, forEach, map} = goog.require('goog.array');
-/** @suppress {extraRequire} Initializes MyFramework. */
-goog.require('my.framework.initialization');
+.. code-block:: javascript
+
+    const MyClass = goog.require('some.package.MyClass');
+    const NsMyClass = goog.require('other.ns.MyClass');
+    const googAsserts = goog.require('goog.asserts');
+    const testingAsserts = goog.require('goog.testing.asserts');
+    const than80columns = goog.require('pretend.this.is.longer.than80columns');
+    const {clear, forEach, map} = goog.require('goog.array');
+    /** @suppress {extraRequire} Initializes MyFramework. */
+    goog.require('my.framework.initialization');
+
 Illegal:
 
-const randomName = goog.require('something.else'); // name must match
+.. code-block::
+   :class: not-recommended
 
-const {clear, forEach, map} = // don't break lines
-    goog.require('goog.array');
+    const randomName = goog.require('something.else'); // name must match
 
-function someFunction() {
-  const alias = goog.require('my.long.name.alias'); // must be at top level
-  // …
-}
-3.4.1 goog.forwardDeclare
-goog.forwardDeclare is not needed very often, but is a valuable tool to break circular dependencies or to reference late loaded code. These statements are grouped together and immediately follow any goog.require statements. A goog.forwardDeclare statement must follow the same style rules as a goog.require statement.
+    const {clear, forEach, map} = // don't break lines
+        goog.require('goog.array');
 
-3.5 The file’s implementation
-The actual implementation follows after all dependency information is declared (separated by at least one blank line).
+    function someFunction() {
+      const alias = goog.require('my.long.name.alias'); // must be at top level
+      // …
+    }
 
-This may consist of any module-local declarations (constants, variables, classes, functions, etc), as well as any exported symbols.
+3.4.1. ``goog.forwardDeclare``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``goog.forwardDeclare`` is not needed very often, but is a valuable tool to 
+break circular dependencies or to reference late loaded code. These statements 
+are grouped together and immediately follow any ``goog.require`` statements. A 
+``goog.forwardDeclare`` statement must follow the same style rules as a 
+``goog.require`` statement.
+
+3.5. The file’s implementation
+------------------------------
+
+The actual implementation follows after all dependency information is declared 
+(separated by at least one blank line).
+
+This may consist of any module-local declarations (constants, variables, 
+classes, functions, etc), as well as any exported symbols.
