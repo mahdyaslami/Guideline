@@ -517,6 +517,7 @@ li.toctree-l1 > a {
     background: lightblue;
     width: 100%;
     display: inline-block;
+    margin-top: 5px;
 }   
 
 /*
