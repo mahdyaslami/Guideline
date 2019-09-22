@@ -15,7 +15,7 @@ we follow universally, and avoids giving advice that isn't clearly enforceable
 (whether by human or tool).
 
 1.1. Terminology notes
----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 In this document, unless otherwise clarified:
 
@@ -26,12 +26,13 @@ The term member (of a class) is used inclusively to mean a nested class, field,
 method, or constructor; that is, all top-level contents of a class except 
 initializers and comments.
 
-The term comment always refers to implementation comments. We do not use the 
-phrase "documentation comments", instead using the common term "Javadoc."
-Other "terminology notes" will appear occasionally throughout the document.
+This Style Guide uses `RFC 2119`_ terminology when using the phrases must, must 
+not, should, should not, and may. The terms prefer and avoid correspond to 
+should and should not, respectively. Imperative and declarative statements are 
+prescriptive and correspond to must.
 
 1.2. Guide notes
----------------
+^^^^^^^^^^^^^^^^
 
 Example code in this document is non-normative. That is, while the examples are 
 in Google Style, they may not illustrate the only stylish way to represent the 
@@ -43,3 +44,6 @@ rules.
    :caption: Table of Contents
    
    source-file-basics-en.rst
+   source-file-structure-en.rst
+   
+.. _RFC 2119: http://tools.ietf.org/html/rfc2119
